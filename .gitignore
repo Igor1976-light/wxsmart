@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs and runtime artifacts
+*.log
+
+# Local project data (do not publish)
+temp/
+.old/
+
+# macOS
+.DS_Store

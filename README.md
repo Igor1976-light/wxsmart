@@ -26,6 +26,14 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+Optional: Umgebungsvariablen vorbereiten:
+
+```zsh
+cp .env.example .env
+```
+
+Danach Werte in `.env` anpassen (z. B. `MQTT_HOST`, `MQTT_TOPIC`).
+
 2. API starten:
 
 ```zsh
