@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from contextlib import asynccontextmanager
 import logging
 from pathlib import Path
 
@@ -26,20 +27,24 @@ BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 INDEX_FILE = STATIC_DIR / "index.html"
 
-app = FastAPI(title="WXsmart Dashboard API", version="0.1.0")
+@asynccontextmanager
+async def lifespan(_: FastAPI):
+    logger.info("Starting WXsmart Dashboard API")
+    mqtt_service.start()
+    try:
+        yield
+    finally:
+        logger.info("Stopping WXsmart Dashboard API")
+        mqtt_service.stop()
+
+
+app = FastAPI(title="WXsmart Dashboard API", version="0.1.0", lifespan=lifespan)
 app.include_router(create_api_router(state_store))
 
 
 @app.get("/")
 def dashboard_index() -> FileResponse:
-    return FileResponse(
-        INDEX_FILE,
-        headers={
-            "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0",
-            "Pragma": "no-cache",
-            "Expires": "0",
-        },
-    )
+    return FileResponse(INDEX_FILE)
 
 
 @app.websocket("/ws/live")
@@ -59,14 +64,3 @@ async def ws_live(websocket: WebSocket) -> None:
     except WebSocketDisconnect:
         logger.info("WebSocket client disconnected")
 
-
-@app.on_event("startup")
-def on_startup() -> None:
-    logger.info("Starting WXsmart Dashboard API")
-    mqtt_service.start()
-
-
-@app.on_event("shutdown")
-def on_shutdown() -> None:
-    logger.info("Stopping WXsmart Dashboard API")
-    mqtt_service.stop()
