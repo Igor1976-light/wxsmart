@@ -52,7 +52,7 @@ MQTT_HOST=<broker-ip-oder-hostname> MQTT_PORT=9001 uvicorn app.main:app --host 1
 
 - `MQTT_HOST` (Default: `localhost`)
 - `MQTT_PORT` (Default: `9001`)
-- `MQTT_TOPIC` (Default: `WXSMART/1660101260218/#`)
+- `MQTT_TOPIC` (Default: `WXSMART/#`, optional spezifischer Filter: `WXSMART/<seriennummer>/#`)
 - `MQTT_TRANSPORT` (Default: `websockets`)
 - `APP_HOST` (Default: `127.0.0.1`)
 - `APP_PORT` (Default: `8000`)

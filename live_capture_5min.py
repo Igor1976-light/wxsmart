@@ -6,7 +6,7 @@ from typing import Any
 import paho.mqtt.client as mqtt
 
 DURATION_SECONDS = int(os.getenv("WXSMART_CAPTURE_SECONDS", "45"))
-DEVICE_PREFIX = os.getenv("WXSMART_CAPTURE_DEVICE_PREFIX", "WXSMART/1660101260218/")
+DEVICE_PREFIX = os.getenv("WXSMART_CAPTURE_DEVICE_PREFIX", "WXSMART/")
 BROKER_HOST = os.getenv("MQTT_HOST", "localhost")
 BROKER_PORT = 9001
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))

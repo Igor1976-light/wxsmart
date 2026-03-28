@@ -15,8 +15,10 @@ signal.signal(signal.SIGPIPE, signal.SIG_DFL)
 
 BROKER_HOST = os.getenv("MQTT_HOST", "localhost")
 BROKER_PORT = 9001
-DEFAULT_SERIAL = os.getenv("WXSMART_SERIAL", "1660101260218")
-TOPIC_FILTER = os.getenv("MQTT_TOPIC", f"WXSMART/{DEFAULT_SERIAL}/#")
+DEFAULT_SERIAL = os.getenv("WXSMART_SERIAL", "").strip()
+TOPIC_FILTER = os.getenv("MQTT_TOPIC") or (
+    f"WXSMART/{DEFAULT_SERIAL}/#" if DEFAULT_SERIAL else "WXSMART/#"
+)
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_LOG_FILE = os.path.join(PROJECT_DIR, "temp", "wxsmart_messages.log")
 LOG_FILE = os.getenv("MQTT_LOG_FILE", DEFAULT_LOG_FILE)

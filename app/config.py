@@ -6,7 +6,7 @@ import os
 class Settings:
     mqtt_host: str = os.getenv("MQTT_HOST", "localhost")
     mqtt_port: int = int(os.getenv("MQTT_PORT", "9001"))
-    mqtt_topic: str = os.getenv("MQTT_TOPIC", "WXSMART/1660101260218/#")
+    mqtt_topic: str = os.getenv("MQTT_TOPIC", "WXSMART/#")
     mqtt_transport: str = os.getenv("MQTT_TRANSPORT", "websockets")
     mqtt_keepalive: int = int(os.getenv("MQTT_KEEPALIVE", "60"))
 
