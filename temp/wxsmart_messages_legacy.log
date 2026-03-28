@@ -1,0 +1,205 @@
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+[LOG] Sending CONNECT (u0, p0, wr0, wq0, wf0, c1, k60) client_id=b''
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : True
+Start-Zeit : 2026-03-28 00:04:56
+================================================================================
+
+[LOG] Received CONNACK (0, 0)
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+[LOG] Sending SUBSCRIBE (d0, m1) [(b'WXSMART/#', 0)]
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+[LOG] Received SUBACK
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+[LOG] Sending PINGREQ
+[LOG] Received PINGRESP
+[LOG] Sending PINGREQ
+[LOG] Received PINGRESP
+
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 00:29:57
+================================================================================
+
+Discovery läuft für 5s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 5.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene STATUS-Themen
+================================================================================
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+================================================================================
+Gesamt: 21 unterschiedliche STATUS-Themen
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 00:30:23
+================================================================================
+
+Discovery läuft für 3s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 3.0s, 21 Nachrichten)
+
+================================================================================
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 00:30:44
+================================================================================
+
+Discovery läuft für 2s …
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 00:32:20
+================================================================================
+
+Discovery läuft für 4s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 4.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene STATUS-Themen
+================================================================================
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+CSV-Export: /Users/icke/Documents/wxsmart/wxsmart_status_topics.csv
+================================================================================
+Gesamt: 21 unterschiedliche STATUS-Themen
+================================================================================
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 00:39:05
+================================================================================
+
+Discovery läuft für 12s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 12.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene Topics (alle Kategorien)
+================================================================================
+
+--- STATUS ---
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+CSV-Export: /Users/icke/Documents/wxsmart/wxsmart_all_topics.csv
+
+================================================================================
+Gesamt: 21 Topics (21 STATUS, 0 andere)
+================================================================================

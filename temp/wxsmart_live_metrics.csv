@@ -1,0 +1,2 @@
+timestamp,topic,value,display,qos,retain,msg_no
+2026-03-28 01:52:16.421,WXSMART/1660101260218/STATUS/ONLINE,True,True,0,0,22

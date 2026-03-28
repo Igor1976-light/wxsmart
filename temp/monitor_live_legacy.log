@@ -1,0 +1,23 @@
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+[LOG] Sending CONNECT (u0, p0, wr0, wq0, wf0, c1, k60) client_id=b''
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : wxsmart_messages.log
+Verbose    : True
+Start-Zeit : 2026-03-28 00:04:56
+================================================================================
+
+[LOG] Received CONNACK (0, 0)
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+[LOG] Sending SUBSCRIBE (d0, m1) [(b'WXSMART/#', 0)]
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+[LOG] Received SUBACK
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+[LOG] Sending PINGREQ
+[LOG] Received PINGRESP
+[LOG] Sending PINGREQ
+[LOG] Received PINGRESP

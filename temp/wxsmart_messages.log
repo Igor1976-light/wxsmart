@@ -1,0 +1,575 @@
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 01:18:16
+================================================================================
+
+Discovery läuft für 2s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 2.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene Topics (alle Kategorien)
+================================================================================
+
+--- STATUS ---
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+
+================================================================================
+Gesamt: 21 Topics (21 STATUS, 0 andere)
+================================================================================
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 01:26:00
+================================================================================
+
+Discovery läuft für 2s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 2.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene Topics (alle Kategorien)
+================================================================================
+
+--- STATUS ---
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+CSV-Export: /Users/icke/Documents/wxsmart/temp/wxsmart_status_topics.csv
+
+================================================================================
+Gesamt: 21 Topics (21 STATUS, 0 andere)
+================================================================================
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/1660101260218/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : discover
+Start-Zeit : 2026-03-28 01:47:45
+================================================================================
+
+Discovery läuft für 2s …
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/1660101260218/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⚠ Verbindung getrennt: Normal disconnection (nach 2.0s, 21 Nachrichten)
+
+================================================================================
+Gefundene Topics (alle Kategorien)
+================================================================================
+
+--- STATUS ---
+001. WXSMART/1660101260218/STATUS/Config/IF0/IPAddress  | last=192 , 168 , 1 , 128  | count=1
+002. WXSMART/1660101260218/STATUS/Config/System/DeviceName  | last=wxsmart-0218  | count=1
+003. WXSMART/1660101260218/STATUS/Config/System/NetworkIF  | last=0  | count=1
+004. WXSMART/1660101260218/STATUS/Config/System/Version/esp32  | last=10  | count=1
+005. WXSMART/1660101260218/STATUS/Config/System/Version/stm32  | last=62  | count=1
+006. WXSMART/1660101260218/STATUS/ExtUnit1/ID  | last=0  | count=1
+007. WXSMART/1660101260218/STATUS/ExtUnit2/ID  | last=0  | count=1
+008. WXSMART/1660101260218/STATUS/Station1/Version/Bootloader  | last=6  | count=1
+009. WXSMART/1660101260218/STATUS/Station1/Version/Firmware  | last=164  | count=1
+010. WXSMART/1660101260218/STATUS/Tip1/ID  | last=3001  | count=1
+011. WXSMART/1660101260218/STATUS/Tip1/SerialNumber  | last=160 , 32 , 15 , 152 , 2 , 0 , 0 , 19  | count=1
+012. WXSMART/1660101260218/STATUS/Tip2/ID  | last=2210  | count=1
+013. WXSMART/1660101260218/STATUS/Tip2/SerialNumber  | last=160 , 8 , 52 , 179 , 2 , 0 , 0 , 20  | count=1
+014. WXSMART/1660101260218/STATUS/Tool1/ID  | last=23  | count=1
+015. WXSMART/1660101260218/STATUS/Tool1/OperatingHours/Total  | last=6  | count=1
+016. WXSMART/1660101260218/STATUS/Tool1/SerialNumber  | last=12866 , 33681 , 12561 , 4912 , 128 , 65535  | count=1
+017. WXSMART/1660101260218/STATUS/Tool1/Version/Firmware  | last=39  | count=1
+018. WXSMART/1660101260218/STATUS/Tool2/ID  | last=21  | count=1
+019. WXSMART/1660101260218/STATUS/Tool2/OperatingHours/Total  | last=6  | count=1
+020. WXSMART/1660101260218/STATUS/Tool2/SerialNumber  | last=12866 , 33681 , 12561 , 4884 , 16 , 65535  | count=1
+021. WXSMART/1660101260218/STATUS/Tool2/Version/Firmware  | last=29  | count=1
+CSV-Export: /Users/icke/Documents/wxsmart/temp/wxsmart_status_topics.csv
+
+================================================================================
+Gesamt: 21 Topics (21 STATUS, 0 andere)
+================================================================================
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/1660101260218/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : live
+Start-Zeit : 2026-03-28 01:52:14
+================================================================================
+
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/1660101260218/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+[2026-03-28 01:52:16.421] #22 1660101260218 | ONLINE = True
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/1660101260218/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : live
+Start-Zeit : 2026-03-28 01:59:44
+================================================================================
+
+Live-Ansicht aktiv: warte auf Temperature/Read, Power/Read, Counter/Time, ONLINE, State (Hinweis alle 5s)
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/1660101260218/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⏳ Keine Live-Topics seit Start (5s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (10s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (15s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (20s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (25s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (30s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (35s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (40s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (45s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (50s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (55s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (60s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (65s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (70s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (75s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (80s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (85s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (90s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (95s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (100s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (105s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (110s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (115s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (120s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (125s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (131s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (136s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (141s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (146s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (151s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (156s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (161s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (166s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (171s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (176s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (181s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (186s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (191s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (196s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (201s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (206s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (211s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (216s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (221s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (226s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (231s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (236s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (241s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (246s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (251s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (256s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (261s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (266s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (271s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (276s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (281s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (286s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (291s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (296s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (301s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (306s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (311s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (316s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (321s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (326s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (331s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (336s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (341s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (346s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (351s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (356s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (361s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (366s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (371s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (376s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (381s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (386s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (391s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (396s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (402s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (407s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (412s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (417s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (422s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (427s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (432s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (437s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (442s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (447s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (452s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (457s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (462s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (467s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (472s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (477s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (482s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (487s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (492s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (497s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (502s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (507s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (512s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (517s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (522s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (527s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (532s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (537s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (542s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (547s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (552s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (557s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (562s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (567s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (572s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (577s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (582s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (587s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (592s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (597s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (602s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (607s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (612s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (617s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (622s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (627s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (632s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (637s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (642s). Station sendet aktuell nur statische STATUS-Daten.
+Verbinde zu 192.168.1.247:9001 (WebSocket) …
+
+================================================================================
+WXSMART MQTT-Monitor gestartet
+================================================================================
+Broker     : 192.168.1.247:9001 (WebSocket)
+Topic-Filter: WXSMART/1660101260218/#
+Log-Datei  : /Users/icke/Documents/wxsmart/temp/wxsmart_messages.log
+Verbose    : False
+Kompakt    : True
+Modus      : live
+Start-Zeit : 2026-03-28 02:10:27
+================================================================================
+
+Live-Ansicht aktiv: warte auf Temperature/Read, Power/Read, Counter/Time, ONLINE, State (Hinweis alle 6s)
+✔ Verbunden mit Broker auf 192.168.1.247:9001 (nach 0.0s)
+✔ Subscribe auf 'WXSMART/1660101260218/#' gesendet (result=0, mid=1)
+✔ Subscription bestätigt (mid=1, reason_codes=[ReasonCode(Suback, 'Granted QoS 0')])
+⏳ Keine Live-Topics seit Start (647s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (6s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (653s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (12s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (658s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (18s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (663s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (24s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (668s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (673s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (30s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (678s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (36s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (683s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (42s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (688s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (48s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (693s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (54s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (698s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (703s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (60s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (708s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (66s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (713s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (72s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (718s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (78s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (723s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (84s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (728s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (733s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (90s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (738s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (96s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (743s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (102s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (748s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (108s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (753s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (114s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (758s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (763s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (120s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (768s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (127s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (773s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (133s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (778s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (139s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (783s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (145s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (788s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (793s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (151s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (798s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (157s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (803s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (163s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (808s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (169s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (813s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (175s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (818s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (823s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (181s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (828s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (187s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (833s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (193s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (838s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (199s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (843s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (205s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (848s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (853s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (211s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (858s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (217s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (863s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (223s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (868s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (229s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (873s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (235s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (878s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (883s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (241s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (888s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (247s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (893s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (253s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (898s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (259s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (904s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (265s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (909s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (914s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (271s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (919s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (277s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (924s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (283s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (929s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (289s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (934s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (295s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (939s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (944s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (301s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (949s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (307s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (954s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (313s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (959s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (319s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (964s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (325s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (969s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (974s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (331s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (979s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (337s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (984s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (343s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (989s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (349s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (994s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (355s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (999s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1004s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (361s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1009s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (367s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1014s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (373s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1019s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (379s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1024s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (385s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1029s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1034s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (391s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1039s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (398s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1044s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (404s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1049s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (410s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1054s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (416s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1059s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1064s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (422s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1069s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (428s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1074s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (434s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1079s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (440s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1084s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (446s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1089s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1094s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (452s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1099s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (458s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1104s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (464s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1109s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (470s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1114s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (476s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1119s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1124s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (482s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1129s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (488s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1134s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (494s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1139s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (500s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1144s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (506s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1149s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1154s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (512s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1160s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (518s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1165s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (524s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1170s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (530s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1175s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (536s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1180s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1185s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (542s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1190s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (548s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1195s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (554s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1200s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (560s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1205s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (566s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1210s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1215s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (572s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1220s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (578s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1225s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (584s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1230s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (590s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1235s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (596s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1240s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1245s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (602s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1250s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (608s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1255s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (614s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1260s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (620s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1265s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (626s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1270s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1275s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (632s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1280s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (638s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1285s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (644s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1290s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (651s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1295s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (657s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1300s). Station sendet aktuell nur statische STATUS-Daten.
+⏳ Keine Live-Topics seit Start (1305s). Station sendet aktuell nur statische STATUS-Daten.
