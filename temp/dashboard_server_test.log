@@ -1,0 +1,11 @@
+INFO:     Started server process [32385]
+INFO:     Waiting for application startup.
+2026-03-28 21:07:18,732 INFO app.main: Starting WXsmart Dashboard API
+2026-03-28 21:07:18,732 INFO app.mqtt_service: MQTT connect localhost:9001 (websockets)
+2026-03-28 21:07:18,736 INFO app.mqtt_service: MQTT connected; subscribe WXSMART/1660101260218/#
+INFO:     Application startup complete.
+ERROR:    [Errno 48] error while attempting to bind on address ('127.0.0.1', 8000): address already in use
+INFO:     Waiting for application shutdown.
+2026-03-28 21:07:18,736 INFO app.main: Stopping WXsmart Dashboard API
+2026-03-28 21:07:18,737 WARNING app.mqtt_service: MQTT disconnected: Normal disconnection
+INFO:     Application shutdown complete.

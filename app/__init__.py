@@ -1,0 +1,1 @@
+"""WXsmart dashboard application package."""

@@ -1,0 +1,15 @@
+INFO:     Started server process [31170]
+INFO:     Waiting for application startup.
+2026-03-28 21:02:57,998 INFO app.main: Starting WXsmart Dashboard API
+2026-03-28 21:02:57,998 INFO app.mqtt_service: MQTT connect localhost:9001 (websockets)
+2026-03-28 21:02:58,002 INFO app.mqtt_service: MQTT connected; subscribe WXSMART/1660101260218/#
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50085 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50086 - "GET /api/state HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+2026-03-28 21:03:00,025 INFO app.main: Stopping WXsmart Dashboard API
+2026-03-28 21:03:00,128 WARNING app.mqtt_service: MQTT disconnected: Normal disconnection
+INFO:     Application shutdown complete.
+INFO:     Finished server process [31170]

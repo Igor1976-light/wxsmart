@@ -2,8 +2,8 @@
 
 # Diagnose-Script: Prüft Weller-Erreichbarkeit und MQTT-Ports
 
-WELLER_IP="192.168.1.128"
-MAC_IP="192.168.1.247"
+WELLER_IP="${WELLER_IP:-192.168.0.50}"
+BROKER_IP="${BROKER_IP:-127.0.0.1}"
 
 echo "🔍 WXSMART/Weller Diagnose"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -47,9 +47,9 @@ else
 fi
 
 echo ""
-echo "3️⃣  Broker-Status (auf deinem Mac $MAC_IP):"
+echo "3️⃣  Broker-Status ($BROKER_IP):"
 echo -n "   Port 9001 (WebSocket):    "
-if timeout 2 bash -c "echo > /dev/tcp/$MAC_IP/9001" 2>/dev/null; then
+if timeout 2 bash -c "echo > /dev/tcp/$BROKER_IP/9001" 2>/dev/null; then
     echo "✅ ERREICHBAR (Broker läuft)"
 else
     echo "❌ Nicht erreichbar (Broker nicht aktiv?)"
@@ -60,7 +60,7 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 echo ""
 echo "📝 Nächste Schritte:"
 echo "   1. Überprüfe die Weller-Konfiguration:"
-echo "      - Broker-Host: $MAC_IP"
+echo "      - Broker-Host: $BROKER_IP"
 echo "      - Broker-Port: 9001"
 echo "      - Protokoll: WebSocket MQTT (oder Standard MQTT auf 1883)"
 echo ""

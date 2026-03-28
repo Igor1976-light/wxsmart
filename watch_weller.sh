@@ -2,7 +2,8 @@
 
 # Kontinuierliche Weller-Überwachung: Prüft jede Sekunde, ob Port 9001 offen wird
 
-WELLER_IP="192.168.1.128"
+WELLER_IP="${WELLER_IP:-192.168.0.50}"
+BROKER_IP="${BROKER_IP:-127.0.0.1}"
 CHECK_PORT=9001
 MAX_ATTEMPTS=120  # 2 Minuten
 
@@ -51,7 +52,7 @@ else
     echo "Mögliche Lösungen:"
     echo "1. Weller ist im Standby → Einschalten/Aufwecken"
     echo "2. Netzwerk-Modul ist nicht aktiv → In Weller-Einstellungen aktivieren"
-    echo "3. Falsche MQTT-Konfiguration → Broker-IP 192.168.1.247 / Port 9001 prüfen"
+    echo "3. Falsche MQTT-Konfiguration → Broker-IP $BROKER_IP / Port 9001 prüfen"
     echo "4. Weller-Reboot → Ausschalten für 10 Sekunden, dann anschalten"
 fi
 echo ""

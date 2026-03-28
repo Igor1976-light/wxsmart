@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WXsmart Live Dashboard</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1220;
+        --card: #131c2f;
+        --card-border: #253252;
+        --text: #e6edf7;
+        --muted: #96a7c3;
+        --ok: #2ecc71;
+        --warn: #f1c40f;
+        --bad: #e74c3c;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 24px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background: radial-gradient(circle at top, #13203a, var(--bg));
+        color: var(--text);
+      }
+      h1 { margin: 0 0 8px; font-size: 1.5rem; }
+      .sub { color: var(--muted); margin-bottom: 20px; }
+      .status { display: inline-flex; align-items: center; gap: 8px; }
+      .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--bad); }
+      .dot.ok { background: var(--ok); }
+      .grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 14px;
+      }
+      .card h2 { margin: 0 0 10px; font-size: 1.1rem; }
+      .row { display: flex; justify-content: space-between; gap: 10px; margin: 8px 0; }
+      .k { color: var(--muted); }
+      .v { text-align: right; font-variant-numeric: tabular-nums; }
+      .temp { font-size: 1.3rem; font-weight: 700; }
+      .foot { margin-top: 16px; color: var(--muted); font-size: 0.9rem; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    </style>
+  </head>
+  <body>
+    <h1>WXsmart Live Dashboard</h1>
+    <div class="sub">
+      <span class="status"><span id="wsDot" class="dot"></span><span id="wsText">Verbinde…</span></span>
+    </div>
+
+    <div class="grid">
+      <section class="card" id="stationCard">
+        <h2>Station</h2>
+        <div class="row"><span class="k">Online</span><span id="stationOnline" class="v">-</span></div>
+        <div class="row"><span class="k">Firmware</span><span id="stationFirmware" class="v">-</span></div>
+        <div class="row"><span class="k">Device Name</span><span id="stationDevice" class="v">-</span></div>
+        <div class="row"><span class="k">UTC</span><span id="stationUtc" class="v mono">-</span></div>
+        <div class="row"><span class="k">Aktualisiert</span><span id="stationUpdated" class="v mono">-</span></div>
+      </section>
+
+      <section class="card" id="tool1Card">
+        <h2>Tool 1</h2>
+        <div class="row"><span class="k">Temperatur</span><span id="tool1Temp" class="v temp">-</span></div>
+        <div class="row"><span class="k">Power</span><span id="tool1Power" class="v">-</span></div>
+        <div class="row"><span class="k">Counter Time</span><span id="tool1Counter" class="v">-</span></div>
+        <div class="row"><span class="k">Serial</span><span id="tool1Serial" class="v mono">-</span></div>
+        <div class="row"><span class="k">State</span><span id="tool1State" class="v">-</span></div>
+      </section>
+
+      <section class="card" id="tool2Card">
+        <h2>Tool 2</h2>
+        <div class="row"><span class="k">Temperatur</span><span id="tool2Temp" class="v temp">-</span></div>
+        <div class="row"><span class="k">Power</span><span id="tool2Power" class="v">-</span></div>
+        <div class="row"><span class="k">Counter Time</span><span id="tool2Counter" class="v">-</span></div>
+        <div class="row"><span class="k">Serial</span><span id="tool2Serial" class="v mono">-</span></div>
+        <div class="row"><span class="k">State</span><span id="tool2State" class="v">-</span></div>
+      </section>
+    </div>
+
+    <div class="foot">
+      Nachrichten gesamt: <span id="msgCount" class="mono">0</span> ·
+      Letztes Topic: <span id="lastTopic" class="mono">-</span>
+    </div>
+
+    <script>
+      const byId = (id) => document.getElementById(id);
+      const toText = (value, fallback = "-") => {
+        if (value === null || value === undefined || value === "") return fallback;
+        return String(value);
+      };
+
+      function renderTool(prefix, tool) {
+        const temp = tool?.temperature_c;
+        byId(`${prefix}Temp`).textContent = temp === null || temp === undefined ? "-" : `${temp.toFixed(1)} °C`;
+        byId(`${prefix}Power`).textContent = tool?.power_w === null || tool?.power_w === undefined ? "-" : `${tool.power_w} W`;
+        byId(`${prefix}Counter`).textContent = toText(tool?.counter_time);
+        byId(`${prefix}Serial`).textContent = toText(tool?.serial_number);
+        byId(`${prefix}State`).textContent = toText(tool?.state);
+      }
+
+      function renderState(data) {
+        const station = data.station || {};
+        const tools = data.tools || {};
+
+        byId("stationOnline").textContent = toText(station.online);
+        byId("stationFirmware").textContent = toText(station.firmware);
+        byId("stationDevice").textContent = toText(station.device_name);
+        byId("stationUtc").textContent = toText(station.utc);
+        byId("stationUpdated").textContent = toText(station.updated_at);
+
+        renderTool("tool1", tools.Tool1 || {});
+        renderTool("tool2", tools.Tool2 || {});
+
+        byId("msgCount").textContent = toText(data.message_count, "0");
+        byId("lastTopic").textContent = toText(data.last_topic);
+      }
+
+      let reconnectTimer = null;
+
+      function connectWS() {
+        const protocol = location.protocol === "https:" ? "wss" : "ws";
+        const ws = new WebSocket(`${protocol}://${location.host}/ws/live`);
+
+        ws.addEventListener("open", () => {
+          byId("wsDot").classList.add("ok");
+          byId("wsText").textContent = "Live verbunden";
+        });
+
+        ws.addEventListener("message", (event) => {
+          try {
+            renderState(JSON.parse(event.data));
+          } catch {
+            byId("wsText").textContent = "Fehler beim Parsen der Live-Daten";
+          }
+        });
+
+        ws.addEventListener("close", () => {
+          byId("wsDot").classList.remove("ok");
+          byId("wsText").textContent = "Getrennt – Reconnect läuft…";
+          if (!reconnectTimer) {
+            reconnectTimer = setTimeout(() => {
+              reconnectTimer = null;
+              connectWS();
+            }, 1500);
+          }
+        });
+
+        ws.addEventListener("error", () => {
+          byId("wsDot").classList.remove("ok");
+          byId("wsText").textContent = "WebSocket-Fehler";
+          ws.close();
+        });
+      }
+
+      connectWS();
+    </script>
+  </body>
+</html>

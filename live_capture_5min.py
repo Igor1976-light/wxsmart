@@ -6,8 +6,8 @@ from typing import Any
 import paho.mqtt.client as mqtt
 
 DURATION_SECONDS = int(os.getenv("WXSMART_CAPTURE_SECONDS", "45"))
-DEVICE_PREFIX = "WXSMART/1660101260218/"
-BROKER_HOST = "192.168.1.247"
+DEVICE_PREFIX = os.getenv("WXSMART_CAPTURE_DEVICE_PREFIX", "WXSMART/1660101260218/")
+BROKER_HOST = os.getenv("MQTT_HOST", "localhost")
 BROKER_PORT = 9001
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_LOG_FILE = os.path.join(PROJECT_DIR, "temp", "wxsmart_live_5min.log")
@@ -38,7 +38,6 @@ def on_connect(
 
 
 def on_message(client: mqtt.Client, userdata: Any, msg: mqtt.MQTTMessage) -> None:
-    topic = msg.topic
     topic = msg.topic
     if not topic.startswith(DEVICE_PREFIX):
         return
