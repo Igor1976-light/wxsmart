@@ -19,6 +19,7 @@ venv/
 # Local project data (do not publish)
 temp/
 .old/
+__pycache__/
 
 # macOS
 .DS_Store
