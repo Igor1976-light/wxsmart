@@ -1,0 +1,59 @@
+# docker-compose.yml
+# Startet InfluxDB 2 + Grafana + wxsmart-Dashboard als Stack.
+#
+# Schnellstart:
+#   cp .env.example .env       # INFLUX_TOKEN setzen
+#   docker compose up -d
+#   open http://localhost:3000  # Grafana  (admin / admin)
+#   open http://localhost:8086  # InfluxDB (setup beim ersten Start)
+#
+# Das wxsmart-Dashboard läuft weiterhin nativ:
+#   ./scripts/reload_dashboard.sh
+
+services:
+
+  # ── InfluxDB 2 ────────────────────────────────────────────────────────────
+  influxdb:
+    image: influxdb:2.7
+    container_name: wxsmart_influxdb
+    restart: unless-stopped
+    ports:
+      - "8086:8086"
+    environment:
+      DOCKER_INFLUXDB_INIT_MODE: setup
+      DOCKER_INFLUXDB_INIT_USERNAME: admin
+      DOCKER_INFLUXDB_INIT_PASSWORD: adminadmin
+      DOCKER_INFLUXDB_INIT_ORG: wxsmart
+      DOCKER_INFLUXDB_INIT_BUCKET: soldering
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: ${INFLUX_TOKEN:-wxsmart-dev-token}
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    healthcheck:
+      test: ["CMD", "influx", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── Grafana ───────────────────────────────────────────────────────────────
+  grafana:
+    image: grafana/grafana:10.4.2
+    container_name: wxsmart_grafana
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      GF_SECURITY_ADMIN_USER: admin
+      GF_SECURITY_ADMIN_PASSWORD: admin
+      GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH: /etc/grafana/provisioning/dashboards/wxsmart.json
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./grafana/provisioning:/etc/grafana/provisioning
+    depends_on:
+      influxdb:
+        condition: service_healthy
+
+volumes:
+  influxdb_data:
+  influxdb_config:
+  grafana_data:

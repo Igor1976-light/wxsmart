@@ -36,11 +36,14 @@ Requirements: a Python environment and a reachable MQTT broker.
 - `app/config.py` – ENV-based configuration
 - `app/state.py` – in-memory state (`station`, `tools`, `tips`) + topic parsing
 - `app/mqtt_service.py` – MQTT subscriber/ingest
-- `app/api.py` – REST endpoints (`/api/health`, `/api/state`, `/api/tools`, `/api/station`)
+- `app/influx_writer.py` – optional InfluxDB 2 writer (active when `INFLUX_URL` is set)
+- `app/api.py` – REST endpoints (`/api/health`, `/api/state`, `/api/tools`, `/api/station`, `/api/export/csv`)
 - `app/static/index.html` – live dashboard
 - `scripts/run_dashboard.sh` – local start helper
 - `scripts/reload_dashboard.sh` – restart + health checks
 - `diagnostic/mqtt_discovery.py` – topic discovery (all topics, filters, grouping)
+- `docker-compose.yml` – InfluxDB 2 + Grafana stack
+- `grafana/provisioning/` – Grafana datasource + dashboard (auto-provisioned)
 - `wxsmart.py` – CLI monitor
 
 ## Current dashboard status
@@ -122,6 +125,63 @@ python3 diagnostic/mqtt_discovery.py --pattern "Tool.*Power" --regex --duration 
 - `MQTT_TRANSPORT` (default: `websockets`)
 - `APP_HOST` (default: `127.0.0.1`)
 - `APP_PORT` (default: `8000`)
+
+InfluxDB (optional — leave empty to disable):
+
+- `INFLUX_URL` (e.g. `http://localhost:8086`)
+- `INFLUX_TOKEN` (API token from InfluxDB)
+- `INFLUX_ORG` (default: `wxsmart`)
+- `INFLUX_BUCKET` (default: `soldering`)
+
+## InfluxDB + Grafana (time-series recording)
+
+The stack stores all power and temperature values as time-series data and
+displays them in Grafana. CSV export is available via the API endpoint.
+
+**Start the stack:**
+
+```zsh
+# Set token in .env:
+echo 'INFLUX_TOKEN=my-secure-token' >> .env
+
+docker compose up -d
+```
+
+Then open:
+
+- Grafana: `http://localhost:3000` (login: `admin` / `admin`)
+- InfluxDB: `http://localhost:8086` (login: `admin` / `adminadmin`)
+
+**Connect the wxsmart app to InfluxDB:**
+
+```zsh
+# Add to .env:
+INFLUX_URL=http://localhost:8086
+INFLUX_TOKEN=my-secure-token
+```
+
+Data will be written automatically on the next dashboard start.
+
+**CSV export:**
+
+```zsh
+# Last hour:
+curl "http://127.0.0.1:8000/api/export/csv" -o session.csv
+
+# Specific time range:
+curl "http://127.0.0.1:8000/api/export/csv?start=2026-03-29T10:00:00Z&stop=2026-03-29T11:00:00Z" -o session.csv
+
+# Tool1 only:
+curl "http://127.0.0.1:8000/api/export/csv?tool=Tool1" -o tool1.csv
+```
+
+Stored fields: `time`, `tool`, `tip_id`, `tip_serial`, `tool_serial`, `power_w`, `temperature_c`, `counter_time_s`, `operating_hours_total`
+
+**Grafana dashboard** includes:
+- Power over time for Tool1 + Tool2 [W]
+- Temperature over time for Tool1 + Tool2 [°C]
+- Energy consumption [Wh] (integral over selected time range)
+- Average temperature per tool
 
 ## Live updates without reload
 

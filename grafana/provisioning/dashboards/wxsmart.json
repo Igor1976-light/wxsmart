@@ -1,0 +1,209 @@
+{
+  "title": "WX Smart Löt-Dashboard",
+  "uid": "wxsmart-soldering",
+  "version": 1,
+  "schemaVersion": 38,
+  "refresh": "5s",
+  "time": { "from": "now-1h", "to": "now" },
+  "timepicker": {},
+  "tags": ["wxsmart", "soldering"],
+  "panels": [
+
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Power [W]",
+      "gridPos": { "x": 0, "y": 0, "w": 12, "h": 8 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watt",
+          "color": { "mode": "palette-classic" },
+          "custom": { "lineWidth": 2, "fillOpacity": 10 }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom" },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "Tool1_Power",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"power_w\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool1\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({ r with _value: float(v: r._value) }))\n  |> yield(name: \"Tool1 Power\")"
+        },
+        {
+          "refId": "Tool2_Power",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"power_w\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool2\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> map(fn: (r) => ({ r with _value: float(v: r._value) }))\n  |> yield(name: \"Tool2 Power\")"
+        }
+      ]
+    },
+
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Temperatur [°C]",
+      "gridPos": { "x": 12, "y": 0, "w": 12, "h": 8 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "celsius",
+          "color": { "mode": "palette-classic" },
+          "custom": { "lineWidth": 2, "fillOpacity": 10 }
+        },
+        "overrides": []
+      },
+      "options": {
+        "legend": { "displayMode": "list", "placement": "bottom" },
+        "tooltip": { "mode": "multi" }
+      },
+      "targets": [
+        {
+          "refId": "Tool1_Temp",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature_c\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool1\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"Tool1 Temp\")"
+        },
+        {
+          "refId": "Tool2_Temp",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature_c\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool2\")\n  |> aggregateWindow(every: v.windowPeriod, fn: mean, createEmpty: false)\n  |> yield(name: \"Tool2 Temp\")"
+        }
+      ]
+    },
+
+    {
+      "id": 3,
+      "type": "stat",
+      "title": "Energieverbrauch Tool1 [Wh]",
+      "description": "∑ P·Δt (Integral über den gewählten Zeitraum)",
+      "gridPos": { "x": 0, "y": 8, "w": 6, "h": 4 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watth",
+          "decimals": 2,
+          "color": { "mode": "thresholds" },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 50,   "color": "yellow" },
+              { "value": 200,  "color": "red" }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "orientation": "auto", "textMode": "auto", "colorMode": "background" },
+      "targets": [
+        {
+          "refId": "Energy1",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"power_w\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool1\")\n  |> integral(unit: 1h, column: \"_value\")\n  |> yield(name: \"Wh Tool1\")"
+        }
+      ]
+    },
+
+    {
+      "id": 4,
+      "type": "stat",
+      "title": "Energieverbrauch Tool2 [Wh]",
+      "description": "∑ P·Δt (Integral über den gewählten Zeitraum)",
+      "gridPos": { "x": 6, "y": 8, "w": 6, "h": 4 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "watth",
+          "decimals": 2,
+          "color": { "mode": "thresholds" },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null, "color": "green" },
+              { "value": 50,   "color": "yellow" },
+              { "value": 200,  "color": "red" }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["sum"] }, "orientation": "auto", "textMode": "auto", "colorMode": "background" },
+      "targets": [
+        {
+          "refId": "Energy2",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"power_w\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool2\")\n  |> integral(unit: 1h, column: \"_value\")\n  |> yield(name: \"Wh Tool2\")"
+        }
+      ]
+    },
+
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Ø Temperatur Tool1",
+      "gridPos": { "x": 12, "y": 8, "w": 6, "h": 4 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "celsius",
+          "decimals": 1,
+          "color": { "mode": "thresholds" },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null,  "color": "blue" },
+              { "value": 200,   "color": "green" },
+              { "value": 380,   "color": "red" }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["mean"] }, "colorMode": "background" },
+      "targets": [
+        {
+          "refId": "AvgTemp1",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature_c\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool1\")\n  |> mean()\n  |> yield(name: \"mean\")"
+        }
+      ]
+    },
+
+    {
+      "id": 6,
+      "type": "stat",
+      "title": "Ø Temperatur Tool2",
+      "gridPos": { "x": 18, "y": 8, "w": 6, "h": 4 },
+      "fieldConfig": {
+        "defaults": {
+          "unit": "celsius",
+          "decimals": 1,
+          "color": { "mode": "thresholds" },
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "value": null,  "color": "blue" },
+              { "value": 200,   "color": "green" },
+              { "value": 380,   "color": "red" }
+            ]
+          }
+        }
+      },
+      "options": { "reduceOptions": { "calcs": ["mean"] }, "colorMode": "background" },
+      "targets": [
+        {
+          "refId": "AvgTemp2",
+          "datasource": { "type": "influxdb", "uid": "${DS_INFLUXDB}" },
+          "query": "from(bucket: \"soldering\")\n  |> range(start: v.timeRangeStart, stop: v.timeRangeStop)\n  |> filter(fn: (r) => r[\"_measurement\"] == \"soldering_session\")\n  |> filter(fn: (r) => r[\"_field\"] == \"temperature_c\")\n  |> filter(fn: (r) => r[\"tool\"] == \"Tool2\")\n  |> mean()\n  |> yield(name: \"mean\")"
+        }
+      ]
+    }
+
+  ],
+
+  "templating": {
+    "list": [
+      {
+        "type": "datasource",
+        "name": "DS_INFLUXDB",
+        "pluginId": "influxdb",
+        "label": "InfluxDB",
+        "hide": 0
+      }
+    ]
+  }
+}

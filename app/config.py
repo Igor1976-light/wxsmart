@@ -14,5 +14,12 @@ class Settings:
     app_port: int = int(os.getenv("APP_PORT", "8000"))
     app_reload: bool = os.getenv("APP_RELOAD", "0").lower() in ("1", "true", "yes")
 
+    # --- InfluxDB 2 (optional) ---
+    # Wird nicht geschrieben wenn influx_url leer ist
+    influx_url: str = os.getenv("INFLUX_URL", "")
+    influx_token: str = os.getenv("INFLUX_TOKEN", "")
+    influx_org: str = os.getenv("INFLUX_ORG", "wxsmart")
+    influx_bucket: str = os.getenv("INFLUX_BUCKET", "soldering")
+
 
 settings = Settings()

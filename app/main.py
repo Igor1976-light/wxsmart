@@ -10,6 +10,7 @@ from fastapi.responses import FileResponse
 
 from .api import create_api_router
 from .config import settings
+from .influx_writer import InfluxWriter
 from .mqtt_service import MqttIngestService
 from .state import StateStore
 
@@ -22,7 +23,8 @@ logger = logging.getLogger(__name__)
 
 
 state_store = StateStore()
-mqtt_service = MqttIngestService(settings, state_store)
+influx_writer = InfluxWriter(settings)
+mqtt_service = MqttIngestService(settings, state_store, influx_writer)
 BASE_DIR = Path(__file__).resolve().parent
 STATIC_DIR = BASE_DIR / "static"
 INDEX_FILE = STATIC_DIR / "index.html"
@@ -36,10 +38,11 @@ async def lifespan(_: FastAPI):
     finally:
         logger.info("Stopping WXsmart Dashboard API")
         mqtt_service.stop()
+        influx_writer.stop()
 
 
 app = FastAPI(title="WXsmart Dashboard API", version="0.1.0", lifespan=lifespan)
-app.include_router(create_api_router(state_store))
+app.include_router(create_api_router(state_store, influx_writer))
 
 
 @app.get("/")

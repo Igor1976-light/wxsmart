@@ -8,6 +8,7 @@ from typing import Any
 import paho.mqtt.client as mqtt
 
 from .config import Settings
+from .influx_writer import InfluxWriter
 from .state import StateStore
 
 
@@ -15,9 +16,10 @@ logger = logging.getLogger(__name__)
 
 
 class MqttIngestService:
-    def __init__(self, settings: Settings, state_store: StateStore) -> None:
+    def __init__(self, settings: Settings, state_store: StateStore, influx_writer: InfluxWriter | None = None) -> None:
         self.settings = settings
         self.state_store = state_store
+        self.influx_writer = influx_writer
 
         transport = self._normalize_transport(self.settings.mqtt_transport)
         callback_api_version = getattr(getattr(mqtt, "CallbackAPIVersion", None), "VERSION2", None)
@@ -67,6 +69,15 @@ class MqttIngestService:
         payload_text = payload_bytes.decode("utf-8", errors="replace")
         payload_value = self.parse_payload_value(payload_text)
         self.state_store.update_from_topic(msg.topic, payload_value)
+        if self.influx_writer and self.influx_writer.enabled:
+            snapshot = self.state_store.snapshot()
+            # Nur bei Power- oder Temperatur-Topics schreiben (nicht bei jedem Counter-Heartbeat)
+            topic_upper = msg.topic.upper()
+            if "POWER" in topic_upper or "TEMPERATURE" in topic_upper:
+                from .state import AppState
+                import dataclasses
+                app_state = self.state_store._state  # noqa: SLF001
+                self.influx_writer.write_state(app_state)
 
     @staticmethod
     def parse_payload_value(payload_text: str) -> str:
